@@ -32,7 +32,7 @@ object LookKafkaData {
   
   var _captureKafkaStream: InputDStream[(String, String)] = null
   //smallest-largest
-  val _captureKafkaParams = Map[String, String]("metadata.broker.list" -> sm.brokers, "auto.offset.reset"->"largest","group.id"->"look-2","zookeeper.connect"->sm.zkHost)
+  val _captureKafkaParams = Map[String, String]("metadata.broker.list" -> sm.brokers, "auto.offset.reset"->"smallest","group.id"->"look-2","zookeeper.connect"->sm.zkHost)
   
   val checkpoint ="/spark/checkpoint/"+dataName
   

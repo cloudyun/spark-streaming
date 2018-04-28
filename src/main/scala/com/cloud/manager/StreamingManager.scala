@@ -18,7 +18,7 @@ class StreamingManager private (taskName: String) {
 
   sparkConf.set("spark.default.parallelism", "150")
 
-  val ssc = new StreamingContext(sparkConf, Durations.seconds(10000))
+  val ssc = new StreamingContext(sparkConf, Durations.seconds(10))
 
   val brokers = "yh-ambari01.lingda.com:6667,yh-ambari02.lingda.com:6667,yh-ambari03.lingda.com:6667"
 

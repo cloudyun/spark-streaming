@@ -39,7 +39,7 @@ public class JavaStreamingManager {
 		sparkConf.setMaster("local[3]");
 		sparkConf.set("spark.default.parallelism", "150");
 		
-		jssc = new JavaStreamingContext(sparkConf, new Duration(100000));
+		jssc = new JavaStreamingContext(sparkConf, new Duration(10));
 		jssc.checkpoint(checkpoint);
 	}
 	
