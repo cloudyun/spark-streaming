@@ -92,7 +92,12 @@
 	</dependencies>
 
 	<build>
-	<plugins>
+		<resources>
+			<resource>
+				<directory>${project.basedir}/config</directory>
+			</resource>
+		</resources>
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -194,4 +199,15 @@
 		</plugins>
 		-->
 	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.scala-tools</groupId>
+				<artifactId>maven-scala-plugin</artifactId>
+				<configuration>
+					<scalaVersion>${scala.version}</scalaVersion>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
 </project>
